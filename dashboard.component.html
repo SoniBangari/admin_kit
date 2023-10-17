@@ -1,0 +1,66 @@
+<!-- <div class="row">
+<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+<div class="col-xl-6 col-l-3 d-flex" *ngFor="let card of cards">
+    <div class="w-50">
+        
+        <app-card class="col-6" [cardData]="card"></app-card>
+   
+</div>
+
+<div class="col-6">
+    
+                
+</div>
+</div>
+<canvas baseChart width="400" height="400"
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend">
+  </canvas>
+</div> -->
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+
+        <div class="row">
+            <div class="col-xl-6 col-xxl-5 d-flex">
+                <div class="w-100">
+                    <div class="row row-cols-2">
+                        <div class="col-sm-6"  *ngFor="let card of cards">
+                        <app-card [cardData]="card"></app-card>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-xxl-7">
+                <div class="card flex-fill w-100">
+                    <div class="card-header">
+
+                        <h5 class="card-title mb-0">Recent Movement</h5>
+                    </div>
+                    <div class="card-body py-3">
+                        <div class="chart chart-sm">
+                            <canvas baseChart width="600" height="250"
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend">
+      </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- <canvas baseChart width="400" height="400"
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend">
+      </canvas> -->
+    </div>
+</main>
